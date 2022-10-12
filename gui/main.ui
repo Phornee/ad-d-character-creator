@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>626</width>
+    <height>634</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="create">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>400</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Create</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>71</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="stats">
+     <item>
+      <widget class="StatWidget" name="str_stat" native="true"/>
+     </item>
+     <item>
+      <widget class="StatWidget" name="con_stat" native="true"/>
+     </item>
+     <item>
+      <widget class="StatWidget" name="dex_stat" native="true"/>
+     </item>
+     <item>
+      <widget class="StatWidget" name="int_stat" native="true"/>
+     </item>
+     <item>
+      <widget class="StatWidget" name="wis_stat" native="true"/>
+     </item>
+     <item>
+      <widget class="StatWidget" name="cha_stat" native="true"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QComboBox" name="classes">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>69</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="classes_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Class</string>
+    </property>
+    <property name="buddy">
+     <cstring>classes</cstring>
+    </property>
+   </widget>
+   <widget class="QLabel" name="races_label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>40</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Race</string>
+    </property>
+    <property name="buddy">
+     <cstring>classes</cstring>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="races">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>60</y>
+      <width>69</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <action name="action_Exit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="action_Find_Replace">
+   <property name="text">
+    <string>FindReplace</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>StatWidget</class>
+   <extends>QWidget</extends>
+   <header>stat_widget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
