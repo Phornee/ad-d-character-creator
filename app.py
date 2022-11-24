@@ -23,6 +23,7 @@ class Window(QMainWindow, Ui_MainWindow):
         self.wis_stat.set_name("WIS")
         self.cha_stat.set_name("CHA")
 
+        # Populate "classes" combobox
         self.classes.addItem('war')
         self.classes.addItem('pal')
         self.classes.addItem('ran')
@@ -32,11 +33,10 @@ class Window(QMainWindow, Ui_MainWindow):
         self.classes.addItem('thi')
         self.classes.addItem('bar')
 
+        # Populate "races" combobox
         self.races.addItem('hum')
         self.races.addItem('elf')
         self.races.addItem('dwa')
-
-
 
     def connectSignalsSlots(self):
         self.action_Exit.triggered.connect(self.close)
@@ -66,12 +66,12 @@ class Window(QMainWindow, Ui_MainWindow):
 
     def createClick(self):
         self.stats_list = create_char('Pepito', self.classes.currentText(), self.races.currentText(), 1)
-        self.str_stat.set_value(self.stats[0])
-        self.con_stat.set_value(self.stats[1])
-        self.dex_stat.set_value(self.stats[2])
-        self.int_stat.set_value(self.stats[3])
-        self.wis_stat.set_value(self.stats[4])
-        self.cha_stat.set_value(self.stats[5])
+        self.str_stat.set_value(self.stats_list[0])
+        self.con_stat.set_value(self.stats_list[1])
+        self.dex_stat.set_value(self.stats_list[2])
+        self.int_stat.set_value(self.stats_list[3])
+        self.wis_stat.set_value(self.stats_list[4])
+        self.cha_stat.set_value(self.stats_list[5])
 
 
 class FindReplaceDialog(QDialog):
